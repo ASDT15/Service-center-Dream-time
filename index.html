@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   
   <!-- تحسينات SEO -->
-  <title>متجر DREAM TIME | خدمات منزلية موثوقة وعصرية</title>
-  <meta name="description" content="نضمن لك الجودة والالتزام في جميع خدماتنا المنزلية. خدمات موثوقة وعصرية، توصيل موثوق في جميع المحافظات. اكتشف تشكيلتنا المتنوعة من الخدمات المتميزة." />
+  <title>مركز خدمات DREAM TIME | خدماتنا موثوقة وعصرية</title>
+  <meta name="description" content="نضمن لك الجودة والالتزام في جميع خدماتنا . خدمات موثوقة وعصرية، توصيل موثوق في جميع المحافظات. اكتشف تشكيلتنا المتنوعة من الخدمات المتميزة." />
   <meta name="keywords" content="خدمات منزلية, سباك, نجار, مبلط, كهربائي, دهان, توصيل, خدمات متكاملة, DREAM TIME" />
   <meta name="author" content="DREAM TIME Services" />
-  <link rel="canonical" href="https://asdt15.github.io/DR-TE/" />
+  <link rel="canonical" href="https://asdt15.github.io/Service-center-Dream-time/" />
 
   <!-- Open Graph Tags -->
-  <meta property="og:title" content="متجر DREAM TIME | خدمات منزلية موثوقة وعصرية" />
-  <meta property="og:description" content="نضمن لك الجودة والالتزام في جميع خدماتنا المنزلية. خدمات موثوقة وعصرية." />
-  <meta property="og:image" content="https://asdt15.github.io/DR-TE/LOGO.png" />
-  <meta property="og:url" content="https://asdt15.github.io/DR-TE/" />
+  <meta property="og:title" content="مركز خدمات DREAM TIME | خدمات  موثوقة وعصرية" />
+  <meta property="og:description" content="نضمن لك الجودة والالتزام في جميع خدماتنا . خدمات موثوقة وعصرية." />
+  <meta property="og:image" content="https://asdt15.github.io/Service-center-Dream-time/LOGO.png" />
+  <meta property="og:url" content="https://asdt15.github.io/Service-center-Dream-time/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="DREAM TIME" />
 
@@ -132,6 +132,26 @@
       flex: 1;
       min-width: 200px;
     }
+    /* --- أسلوب زر فتح المتجر --- */
+    .top-button {
+      background: var(--btn-bg);
+      color: rgb(0, 0, 0);
+      border: none;
+      border-radius: 30px; /* زوايا دائرية */
+      padding: 10px 15px; /* مساحة داخلية */
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* ظل بسيط */
+      transition: background 0.3s, transform 0.2s; /* تأثير عند التحويم */
+      white-space: nowrap; /* منع الالتفاف */
+    }
+
+    .top-button:hover {
+      background: var(--btn-hover); /* لون عند التحويم */
+      transform: scale(1.05); /* تكبير بسيط عند التحويم */
+    }
+    /* --- النهاية: أسلوب زر فتح المتجر --- */
     .contact-button {
       position: fixed;
       bottom: 20px;
@@ -218,46 +238,28 @@
     .slider-image.active {
       opacity: 1; /* ⭐ تظهر الصورة النشطة */
     }
-    .slider-nav {
+    /* --- أسلوب زر التكبير --- */
+    .zoom-button {
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      padding: 0 10px;
-      box-sizing: border-box;
-    }
-    .slider-nav button {
-      background: rgba(0,0,0,0.5);
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.5);
       color: white;
       border: none;
-      width: 40px;
-      height: 40px;
       border-radius: 50%;
-      cursor: pointer;
-      font-size: 1.2rem;
+      width: 30px;
+      height: 30px;
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-    .slider-indicators {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 8px;
-    }
-    .indicator {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.5);
       cursor: pointer;
+      font-size: 1rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 10;
     }
-    .indicator.active {
-      background: white;
+    .slider-container:hover .zoom-button {
+      opacity: 1;
     }
     .main-content {
       max-width: 1400px;
@@ -397,6 +399,45 @@
       margin-top: 20px;
       border-top: 1px solid rgba(255,255,255,0.2);
     }
+    /* --- أسلوب نافذة التكبير --- */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      backdrop-filter: blur(5px);
+    }
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      max-height: 80%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: contain;
+    }
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 2001;
+    }
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+    }
+
     @media (max-width: 768px) {
       .grid {
         grid-template-columns: repeat(2, 1fr);
@@ -414,6 +455,9 @@
       }
       .social-icons {
         bottom: 90px;
+      }
+      .zoom-button {
+        opacity: 1; /* يظهر الزر دائمًا على الشاشات الصغيرة */
       }
     }
     @media (max-width: 576px) {
@@ -447,6 +491,9 @@
         </div>
       </div>
       <div class="greeting">اهلا وسهلا بك نورتنا😍</div>
+      <!-- --- زر فتح المتجر الإلكتروني --- -->
+      <button class="top-button" onclick="openStore()">🛍️ متجر الأحذية</button>
+      <!-- --- النهاية: زر فتح المتجر الإلكتروني --- -->
     </div>
   </header>
   
@@ -461,12 +508,9 @@
           <img src="product-images/images-3/1.jpg" class="slider-image" alt="خدمة 3" loading="eager">
           <img src="product-images/images-4/1.jpg" class="slider-image" alt="خدمة 4" loading="eager">
           <img src="product-images/images-5/1.jpg" class="slider-image" alt="خدمة 5" loading="eager">
+          <!-- زر التكبير داخل حاوية الشريطة -->
+          <button class="zoom-button" onclick="openModal(this)">💢</button>
         </div>
-        <div class="slider-nav">
-          <button onclick="changeSlide(-1)">&#10094;</button>
-          <button onclick="changeSlide(1)">&#10095;</button>
-        </div>
-        <div class="slider-indicators" id="sliderIndicators"></div>
       </div>
       
       <div class="grid" id="productGrid">
@@ -479,6 +523,12 @@
       <i>💬</i>
     </div>
   </main>
+
+  <!-- نافذة التكبير -->
+  <div id="zoomModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
 
   <script>
     // --- المتغيرات ---
@@ -493,7 +543,7 @@
         name: "🔥 مهندس سباك ☣",
         price: 0,
         oldPrice: 0,
-        description: "مهندس ميكانيكي متخصص مسؤول عن تصميم، الإشراف، والتأكد من سلامة وكفاءة جميع أنظمة تزويد المياه، الصرف الصحي، صرف الأمطار، وشبكات مكافحة الحريق داخل المباني والمنشآت. يعتبر هذا الدور حجر الزاوية في ضمان بيئة صحية وآمنة ومريحة للمستخدمين",
+        description: "مهندس مختص با امور المياة والصرف الصحي",
         image: "product-images/images-1/1.jpg"
       },
       {
@@ -501,7 +551,7 @@
         name: "فني تليس 👌",
         price: 0,
         oldPrice: 0,
-        description: "فني بناء متخصص يتركز عمله على تطبيق طبقات المونة (خليط من الإسمنت والرمل والماء) على الأسطح الداخلية والخارجية للجدران والأسقف في المباني. هدفه الأساسي هو تسوية هذه الأ surfaces وجعلها مستوية وموحدة ومهيأة للدهان أو التشطيبات النهائية الأخرى، بالإضافة إلى توفير حماية أولية للهياكل الخرسانية والبنائية",
+        description: "فني يركز على جعل التوازن موجود في الارضي+الجدران",
         image: "product-images/images-2/1.jpg",
       },
       {
@@ -509,7 +559,7 @@
         name: "🦺مبلط ",
         price: 0,  
         oldPrice: 0,
-        description: "فني بناء متخصص ومسؤول عن تركيب أنواع مختلفة من البلاط (مثل السيراميك، البورسلان، الرخام، الجرانيت، الحجر، والموزاييك) على أ surfaces الأرضيات والجدران في الأجزاء الداخلية والخارجية للمباني. تتطلب هذه المهنة دقة عالية وحساً فنياً لضمان استواء السطح، تناسق النقوش، وجودة المتانة",
+        description: "فني بناء متخصص با كل ما يخص البلاط ",
         image: "product-images/images-3/1.jpg",
       },
        {
@@ -517,7 +567,7 @@
         name: "مهندس ابواب سحابه 🧤",
         price: 0,  
         oldPrice: 0,
-        description: "هذا المهندس هو المسؤول عن تصميم وتركيب وتشغيل وصيانة الأبواب الحديدية الكبيرة ذات الحركة العمودية (التي تفتح للأعلى)، والتي تُستخدم غالبًا في المستودعات أو المحلات",
+        description: "مهندس محترف با تركيب وصيانة الابواب السحابه  ",
         image: "product-images/images-4/1.jpg",
       },
        {
@@ -530,36 +580,28 @@
       }
     ];
 
-    // دالة تهيئة مؤشرات شريط الصور
+    // دالة تهيئة شريط الصور (تمت إزالة المؤشرات)
     function initSliderIndicators() {
-      const indicatorsContainer = document.getElementById('sliderIndicators');
-      indicatorsContainer.innerHTML = '';
-      for (let i = 0; i < totalSlides; i++) {
-        const indicator = document.createElement('div');
-        indicator.className = 'indicator';
-        if (i === 0) indicator.classList.add('active');
-        indicator.onclick = () => goToSlide(i);
-        indicatorsContainer.appendChild(indicator);
-      }
+      // تم إزالة هذا الجزء
     }
 
     // دالة تحديث شريط الصور (JavaScript فقط)
     function updateSlider() {
       const images = document.querySelectorAll('.slider-image');
-      const indicators = document.querySelectorAll('.indicator');
+      const zoomButton = document.querySelector('.zoom-button'); // اختر الزر من داخل الحاوية
 
       // إخفاء جميع الصور
       images.forEach(img => img.classList.remove('active'));
       // عرض الصورة الحالية فقط
       images[currentSlide].classList.add('active');
 
-      // تحديث المؤشرات
-      indicators.forEach((indicator, index) => {
-        indicator.classList.toggle('active', index === currentSlide);
-      });
+      // تحديث src للزر عند تغيير الصورة النشطة
+      if (zoomButton) {
+        zoomButton.setAttribute('data-image-src', images[currentSlide].src);
+      }
     }
 
-    // دالة تغيير الصورة
+    // دالة تغيير الصورة (تم إزالة المؤشرات)
     function changeSlide(direction) {
       clearInterval(slideInterval); // إيقاف التحرك التلقائي مؤقتاً
       currentSlide += direction;
@@ -569,7 +611,7 @@
       startSlider(); // إعادة تشغيل التحرك التلقائي
     }
 
-    // دالة الذهاب إلى صورة محددة
+    // دالة الذهاب إلى صورة محددة (تم إزالة المؤشرات)
     function goToSlide(slideIndex) {
       clearInterval(slideInterval); // إيقاف التحرك التلقائي مؤقتاً
       currentSlide = slideIndex;
@@ -586,7 +628,7 @@
       }, 3000); // تغيير كل 3 ثواني
     }
 
-    // دالة عرض المنتجات
+    // دالة عرض المنتجات (بلا تغيير)
     function renderProducts(productsToRender) {
       const grid = document.getElementById('productGrid');
       if (!grid) return;
@@ -603,7 +645,7 @@
       grid.appendChild(fragment);
     }
 
-    // دالة إنشاء بطاقة المنتج (المعدّلة)
+    // دالة إنشاء بطاقة المنتج (تمت إزالة زر التكبير منها)
     function createProductCard(product) {
         const card = document.createElement('div');
         card.className = 'card';
@@ -644,15 +686,39 @@
                 <button class="request-service" onclick="requestService(${product.id})">طلب الخدمة</button>
             </div>
         `;
-       // مخنص با صفحه المنتج 
-       // card.onclick = function(event) {
-          //  if (!event.target.closest('button')) {
-            //    window.location.href = `product-${product.id}.html`;
-         //   }
-     //   };
 
         return card;
     }
+
+    // --- دوال تكبير الصورة ---
+    function openModal(button) {
+      const imageSrc = button.getAttribute('data-image-src');
+      if (!imageSrc) return; // تحقق من وجود عنوان الصورة
+
+      const modal = document.getElementById("zoomModal");
+      const modalImg = document.getElementById("modalImg");
+      modal.style.display = "block";
+      modalImg.src = imageSrc;
+    }
+
+    function closeModal() {
+      const modal = document.getElementById("zoomModal");
+      modal.style.display = "none";
+    }
+
+    // عند النقر على زر الإغلاق أو خارج الصورة
+    window.onclick = function(event) {
+      const modal = document.getElementById("zoomModal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    // --- دالة فتح المتجر الإلكتروني ---
+    function openStore() {
+      window.open('https://asdt15.github.io/DR-TE/', '_blank'); // '_blank' لفتح الرابط في تبويب جديد
+    }
+    // --- النهاية: دالة فتح المتجر الإلكتروني ---
 
     function requestService(productId) {
       const product = products.find(p => p.id === productId);
@@ -676,8 +742,7 @@
 
     // --- تهيئة الصفحة ---
     document.addEventListener("DOMContentLoaded", function () {
-      initSliderIndicators();
-      updateSlider(); // عرض الصورة الأولى
+      updateSlider(); // عرض الصورة الأولى وتحديث عنوان الصورة في الزر
       startSlider(); // بدء التحرك التلقائي
       renderProducts(products);
     });
