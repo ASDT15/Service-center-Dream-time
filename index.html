@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+  <!-- تحسينات SEO -->
+  <title>متجر DREAM TIME | خدمات منزلية موثوقة وعصرية</title>
+  <meta name="description" content="نضمن لك الجودة والالتزام في جميع خدماتنا المنزلية. خدمات موثوقة وعصرية، توصيل موثوق في جميع المحافظات. اكتشف تشكيلتنا المتنوعة من الخدمات المتميزة." />
+  <meta name="keywords" content="خدمات منزلية, سباك, نجار, مبلط, كهربائي, دهان, توصيل, خدمات متكاملة, DREAM TIME" />
+  <meta name="author" content="DREAM TIME Services" />
+  <link rel="canonical" href="https://asdt15.github.io/DR-TE/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="متجر DREAM TIME | خدمات منزلية موثوقة وعصرية" />
+  <meta property="og:description" content="نضمن لك الجودة والالتزام في جميع خدماتنا المنزلية. خدمات موثوقة وعصرية." />
+  <meta property="og:image" content="https://asdt15.github.io/DR-TE/LOGO.png" />
+  <meta property="og:url" content="https://asdt15.github.io/DR-TE/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DREAM TIME" />
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html {
+      font-size: 16px;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #89a5f3, #383838);
+      color: #ffffff;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    button {
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+    }
+    input,
+    button {
+      outline: none;
+    }
+    :root {
+      --bg-dark: #000000d8;
+      --text-light: #ffffffd0;
+      --btn-bg: #ffeaf898;
+      --btn-hover: #ffffff;
+      --input-border: #82acfa;
+      --search-bg: #fffdfd;
+      --search-text: rgb(147, 158, 252);
+      --section-title-color: #ffffff;
+      --card-bg: #ffffff;
+      --card-border: #8acdfa;
+      --footer-bg: linear-gradient(to right, var(--bg-dark), var(--btn-bg));
+    }
+    .cartoon-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/cubes.png'), #000000;
+      opacity: 0.3;
+      z-index: -1;
+      pointer-events: none;
+    }
+    header {
+      background: linear-gradient(to right, var(--bg-dark), var(--btn-bg));
+      padding: 12px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+    .logo-container img {
+      width: 70px;
+      height: auto;
+    }
+    .logo-texts {
+      display: flex;
+      flex-direction: column;
+    }
+    .logo-texts h1 {
+      font-size: 1.4rem;
+      margin: 0;
+      color: #eeec6d;
+    }
+    .logo-texts h2 {
+      font-size: 1rem;
+      margin: 0;
+      color: #ffffff;
+      opacity: 0.9;
+    }
+    .greeting {
+      color: #e1ff75;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-align: center;
+      margin: 0;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 10px;
+      flex: 1;
+      min-width: 200px;
+    }
+    .contact-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #25d366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      cursor: pointer;
+      font-size: 1.8rem;
+      transition: transform 0.3s;
+    }
+    .contact-button:hover {
+      transform: scale(1.1);
+    }
+    .social-icons {
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .social-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: #3b5998;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .social-icon:hover {
+      transform: scale(1.1);
+    }
+    .social-icon.whatsapp {
+      background: #25d366;
+    }
+    .social-icon.instagram {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    }
+    .social-icon.twitter {
+      background: #1da1f2;
+    }
+    .social-icon.youtube {
+      background: #ff0000;
+    }
+    .image-slider {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto 25px;
+      overflow: hidden; /* ⭐ يخفي الصور خارج الشريحة */
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      height: 200px;
+      position: relative;
+    }
+    .slider-container {
+      position: relative; /* ⭐ لتحديد موقع الصور المطلقة */
+      width: 100%;
+      height: 100%;
+    }
+    .slider-image {
+      position: absolute; /* ⭐ يجعل الصور مطلقة */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* ⭐ يظهر الصورة بالكامل داخل الحاوية */
+      opacity: 0; /* ⭐ مبدئيًا مخفي */
+      transition: opacity 0.5s ease-in-out; /* ⭐ تأثير الظهور */
+    }
+    .slider-image.active {
+      opacity: 1; /* ⭐ تظهر الصورة النشطة */
+    }
+    .slider-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+    .slider-nav button {
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .slider-indicators {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+    .indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.5);
+      cursor: pointer;
+    }
+    .indicator.active {
+      background: white;
+    }
+    .main-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px 20px;
+    }
+    .page-title {
+      text-align: center;
+      font-size: 1.8rem;
+      margin: 20px 0;
+      color: #ffffff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 25px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 15px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      opacity: 1;
+      transform: translateY(0);
+      cursor: pointer;
+    }
+    .image-container {
+      position: relative;
+      overflow: hidden;
+      height: 300px;
+    }
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: scale-down;
+      background-color: #f9f9f9;
+    }
+    .card-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #000000;
+      margin-bottom: 10px;
+    }
+    .card-desc {
+      font-size: 0.95rem;
+      color: #333;
+      margin-bottom: 15px;
+      flex-grow: 1;
+    }
+
+    .card-price-container {
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .card-price-current {
+      font-weight: bold;
+      color: #000000;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: flex-end;
+      gap: 4px;
+    }
+
+    .card-price-currency {
+      font-size: 0.75rem;
+      color: #666;
+      align-self: flex-end;
+      direction: ltr;
+    }
+
+    .request-service {
+      background: var(--btn-bg);
+      color: rgb(0, 0, 0);
+      border: none;
+      padding: 12px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      width: 100%;
+      font-size: 1rem;
+      margin-top: auto;
+    }
+    .request-service:hover {
+      background: var(--btn-hover);
+      box-shadow: 0 4px 12px rgba(255, 120, 226, 0.4);
+    }
+    footer {
+      background: var(--footer-bg);
+      padding: 30px 20px;
+      margin-top: 40px;
+      color: white;
+    }
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .footer-section h3 {
+      color: #afdbf8;
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+    .footer-section p, .footer-section li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    .footer-links {
+      list-style: none;
+    }
+    .footer-links li {
+      margin-bottom: 8px;
+    }
+    .footer-links a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-links a:hover {
+      color: #afdbf8;
+    }
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      margin-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+      .card-body {
+        padding: 15px;
+      }
+      .card-title {
+        font-size: 1.1rem;
+      }
+      .request-service {
+        padding: 10px 15px;
+        font-size: 0.95rem;
+      }
+      .social-icons {
+        bottom: 90px;
+      }
+    }
+    @media (max-width: 576px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+      .image-container {
+        height: 250px;
+      }
+      .contact-button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+      }
+      .social-icons {
+        bottom: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cartoon-bg"></div>
+  <header>
+    <div class="header-content">
+      <div class="logo-container">
+        <img src="LOGO.png" alt="مركز خدمات DREAM TIME" loading="eager">
+        <div class="logo-texts">
+          <h1> مركز خدمات</h1>
+          <h2>DREAM TIME</h2>
+        </div>
+      </div>
+      <div class="greeting">اهلا وسهلا بك نورتنا😍</div>
+    </div>
+  </header>
+  
+  <main>
+    <div class="main-content">
+      <h1 class="page-title">خدمات  موثوقة وعصرية😉</h1>
+      
+      <div class="image-slider" id="imageSlider">
+        <div class="slider-container">
+          <img src="product-images/images-1/1.jpg" class="slider-image active" alt="خدمة 1" loading="eager">
+          <img src="product-images/images-2/1.jpg" class="slider-image" alt="خدمة 2" loading="eager">
+          <img src="product-images/images-3/1.jpg" class="slider-image" alt="خدمة 3" loading="eager">
+          <img src="product-images/images-4/1.jpg" class="slider-image" alt="خدمة 4" loading="eager">
+          <img src="product-images/images-5/1.jpg" class="slider-image" alt="خدمة 5" loading="eager">
+        </div>
+        <div class="slider-nav">
+          <button onclick="changeSlide(-1)">&#10094;</button>
+          <button onclick="changeSlide(1)">&#10095;</button>
+        </div>
+        <div class="slider-indicators" id="sliderIndicators"></div>
+      </div>
+      
+      <div class="grid" id="productGrid">
+        <!-- سيتم ملؤه تلقائيًا -->
+      </div>
+    </div>
+    
+    <!-- أيقونة الاتصال -->
+    <div class="contact-button" onclick="openWhatsApp()">
+      <i>💬</i>
+    </div>
+  </main>
+
+  <script>
+    // --- المتغيرات ---
+    let currentSlide = 0;
+    const totalSlides = 5; // عدد الصور في شريط الصور
+    let slideInterval; // متغير لتخزين المؤقت
+
+    // --- المنتجات اليدوية ---
+    let products = [
+      {
+        id: 1,
+        name: "🔥 مهندس سباك ☣",
+        price: 0,
+        oldPrice: 0,
+        description: "مهندس ميكانيكي متخصص مسؤول عن تصميم، الإشراف، والتأكد من سلامة وكفاءة جميع أنظمة تزويد المياه، الصرف الصحي، صرف الأمطار، وشبكات مكافحة الحريق داخل المباني والمنشآت. يعتبر هذا الدور حجر الزاوية في ضمان بيئة صحية وآمنة ومريحة للمستخدمين",
+        image: "product-images/images-1/1.jpg"
+      },
+      {
+        id: 2,
+        name: "فني تليس 👌",
+        price: 0,
+        oldPrice: 0,
+        description: "فني بناء متخصص يتركز عمله على تطبيق طبقات المونة (خليط من الإسمنت والرمل والماء) على الأسطح الداخلية والخارجية للجدران والأسقف في المباني. هدفه الأساسي هو تسوية هذه الأ surfaces وجعلها مستوية وموحدة ومهيأة للدهان أو التشطيبات النهائية الأخرى، بالإضافة إلى توفير حماية أولية للهياكل الخرسانية والبنائية",
+        image: "product-images/images-2/1.jpg",
+      },
+      {
+        id: 3,
+        name: "🦺مبلط ",
+        price: 0,  
+        oldPrice: 0,
+        description: "فني بناء متخصص ومسؤول عن تركيب أنواع مختلفة من البلاط (مثل السيراميك، البورسلان، الرخام، الجرانيت، الحجر، والموزاييك) على أ surfaces الأرضيات والجدران في الأجزاء الداخلية والخارجية للمباني. تتطلب هذه المهنة دقة عالية وحساً فنياً لضمان استواء السطح، تناسق النقوش، وجودة المتانة",
+        image: "product-images/images-3/1.jpg",
+      },
+       {
+        id: 4,
+        name: "مهندس ابواب سحابه 🧤",
+        price: 0,  
+        oldPrice: 0,
+        description: "هذا المهندس هو المسؤول عن تصميم وتركيب وتشغيل وصيانة الأبواب الحديدية الكبيرة ذات الحركة العمودية (التي تفتح للأعلى)، والتي تُستخدم غالبًا في المستودعات أو المحلات",
+        image: "product-images/images-4/1.jpg",
+      },
+       {
+        id: 5,
+        name: "🔨 نجار",
+        price: 0,  
+        oldPrice: 0,
+        description: "مختص محترف بالنجارة",
+        image: "product-images/images-5/1.jpg", 
+      }
+    ];
+
+    // دالة تهيئة مؤشرات شريط الصور
+    function initSliderIndicators() {
+      const indicatorsContainer = document.getElementById('sliderIndicators');
+      indicatorsContainer.innerHTML = '';
+      for (let i = 0; i < totalSlides; i++) {
+        const indicator = document.createElement('div');
+        indicator.className = 'indicator';
+        if (i === 0) indicator.classList.add('active');
+        indicator.onclick = () => goToSlide(i);
+        indicatorsContainer.appendChild(indicator);
+      }
+    }
+
+    // دالة تحديث شريط الصور (JavaScript فقط)
+    function updateSlider() {
+      const images = document.querySelectorAll('.slider-image');
+      const indicators = document.querySelectorAll('.indicator');
+
+      // إخفاء جميع الصور
+      images.forEach(img => img.classList.remove('active'));
+      // عرض الصورة الحالية فقط
+      images[currentSlide].classList.add('active');
+
+      // تحديث المؤشرات
+      indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === currentSlide);
+      });
+    }
+
+    // دالة تغيير الصورة
+    function changeSlide(direction) {
+      clearInterval(slideInterval); // إيقاف التحرك التلقائي مؤقتاً
+      currentSlide += direction;
+      if (currentSlide < 0) currentSlide = totalSlides - 1;
+      if (currentSlide >= totalSlides) currentSlide = 0;
+      updateSlider();
+      startSlider(); // إعادة تشغيل التحرك التلقائي
+    }
+
+    // دالة الذهاب إلى صورة محددة
+    function goToSlide(slideIndex) {
+      clearInterval(slideInterval); // إيقاف التحرك التلقائي مؤقتاً
+      currentSlide = slideIndex;
+      updateSlider();
+      startSlider(); // إعادة تشغيل التحرك التلقائي
+    }
+
+    // دالة بدء التحرك التلقائي
+    function startSlider() {
+      slideInterval = setInterval(() => {
+        currentSlide++;
+        if (currentSlide >= totalSlides) currentSlide = 0;
+        updateSlider();
+      }, 3000); // تغيير كل 3 ثواني
+    }
+
+    // دالة عرض المنتجات
+    function renderProducts(productsToRender) {
+      const grid = document.getElementById('productGrid');
+      if (!grid) return;
+      grid.innerHTML = '';
+      if (productsToRender.length === 0) {
+        grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#fff;font-size:1.2rem;">لا توجد خدمات مطابقة</p>';
+        return;
+      }
+      const fragment = document.createDocumentFragment();
+      productsToRender.forEach(product => {
+        const card = createProductCard(product);
+        fragment.appendChild(card);
+      });
+      grid.appendChild(fragment);
+    }
+
+    // دالة إنشاء بطاقة المنتج (المعدّلة)
+    function createProductCard(product) {
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        const shortDescription = product.description && product.description.length > 50
+            ? product.description.slice(0, 50) + "..."
+            : product.description || "وصف غير متوفر";
+
+        // عرض السعر فقط إذا كان غير 0
+        let priceHtml = '';
+        if (product.price > 0) {
+          priceHtml = `
+            <div class="card-price-current">
+              <span style="color:#000000; font-weight:bold;">${Math.round(product.price)} ر.يمني</span>
+              <span style="color:#47a6ff; font-weight:bold; margin-right:8px;">(${Math.round(product.price / 140)} ر.سعودي)</span>
+            </div>
+          `;
+        } else {
+          priceHtml = `
+            <div class="card-price-current">
+              <span style="color:#000000; font-weight:bold;">اطلب معاينة مجانية</span>
+            </div>
+          `;
+        }
+
+        card.innerHTML = `
+            <div class="image-container">
+                <img src="${product.image}" alt="${product.name}" loading="lazy">
+            </div>
+            <div class="card-body">
+                <div class="card-title">${product.name}</div>
+                <div class="card-desc">${shortDescription}</div>
+                
+                <div class="card-price-container">
+                  ${priceHtml}
+                </div>
+
+                <button class="request-service" onclick="requestService(${product.id})">طلب الخدمة</button>
+            </div>
+        `;
+       // مخنص با صفحه المنتج 
+       // card.onclick = function(event) {
+          //  if (!event.target.closest('button')) {
+            //    window.location.href = `product-${product.id}.html`;
+         //   }
+     //   };
+
+        return card;
+    }
+
+    function requestService(productId) {
+      const product = products.find(p => p.id === productId);
+      if (!product) return;
+      const phoneNumber = "966542819759";
+      let message = `طلب جديد للخدمة:%0A`;
+      message += `الخدمة: ${product.name}%0A`;
+      if (product.price > 0) {
+        message += `السعر: ${Math.round(product.price)} ر.يمني (${Math.round(product.price / 140)} ر.س)%0A`;
+      } else {
+        message += `نوع الخدمة: ${product.name}%0A`;
+      }
+      message += `الرجاء تزويدي بالموقع ونوع المشكلة / العمل المطلوب.%0A`;
+      window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
+    }
+
+    // دوال فتح وسائل التواصل
+    function openWhatsApp() {
+      window.open('https://wa.me/966542819759', '_blank');
+    }
+
+    // --- تهيئة الصفحة ---
+    document.addEventListener("DOMContentLoaded", function () {
+      initSliderIndicators();
+      updateSlider(); // عرض الصورة الأولى
+      startSlider(); // بدء التحرك التلقائي
+      renderProducts(products);
+    });
+  </script>
+</body>
+</html>
